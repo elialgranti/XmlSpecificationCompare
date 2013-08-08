@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using NUnit.Framework.Constraints;
+﻿using NUnit.Framework.Constraints;
 
 namespace XmlSpecificationCompare.NUnit
 {

@@ -1,11 +1,9 @@
 ﻿using System.Collections;
-using System.Diagnostics;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using NUnit.Framework;
-using XmlSpecificationCompare;
 using XmlSpecificationCompare.XPathDiscovery;
 
 namespace XmlSpecificationCompareTest
