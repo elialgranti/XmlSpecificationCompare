@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Eli Algranti Copyright ©  2013
+using System.Collections;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -9,7 +10,7 @@ using XmlSpecificationCompare.XPathDiscovery;
 namespace XmlSpecificationCompareTest
 {
     [TestFixture]
-    public class ExtensionsTest
+    public class XpathDiscoveryTest
     {
         private const string XPathSource =
       @"<?xml version=""1.0""?>

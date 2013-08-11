@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Eli Algranti Copyright ©  2013
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,21 @@ namespace XmlSpecificationCompare.XPathDiscovery
                 {typeof(XComment), new CommentXPathName()}
             };
 
+        /// <summary>
+        /// Constructs and returns the XPath for the <see cref="XObject"/> in document.
+        /// </summary>
+        /// <remarks>
+        /// Can construct the XPath for <see cref="XObject"/> instances of the following
+        /// actual types:<cr />
+        /// <list type="bullet">
+        /// <item><see cref="XElement"/></item>
+        /// <item><see cref="XAttribute"/></item>
+        /// <item><see cref="XElement"/></item>
+        /// <item><see cref="XText"/></item>
+        /// <item><see cref="XCData"/></item>
+        /// <item><see cref="XComment"/></item>
+        /// </list>
+        /// </remarks>
         public static string GetXPath(this XObject xObject)
         {
             var builder = new StringBuilder();

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿//Eli Algranti Copyright ©  2013
+using NUnit.Framework;
 using XmlSpecificationCompare.NUnit;
 
 namespace XmlSpecificationCompareTest

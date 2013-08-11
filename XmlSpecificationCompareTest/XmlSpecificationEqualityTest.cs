@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿//Eli Algranti Copyright ©  2013
+using System.Xml.Linq;
 using NUnit.Framework;
 using XmlSpecificationCompare;
 

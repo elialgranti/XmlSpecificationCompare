@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Eli Algranti Copyright ©  2013
+using System;
 using System.Xml.Linq;
 using NUnit.Framework.Constraints;
 

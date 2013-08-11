@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="NUnitSupportTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ExtensionsTest.cs" />
+    <Compile Include="XpathDiscoveryTest.cs" />
     <Compile Include="XmlSpecificationEqualityTest.cs" />
   </ItemGroup>
   <ItemGroup>

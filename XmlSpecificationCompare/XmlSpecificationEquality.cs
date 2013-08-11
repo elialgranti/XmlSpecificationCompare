@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Eli Algranti Copyright ©  2013
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
@@ -11,6 +12,7 @@ namespace XmlSpecificationCompare
         {
             return AreEqual(ParseXml(xmlA).Root, ParseXml(xmlB).Root);
         }
+
 
         public static XmlEqualityResult AreEqual(XElement xmlA, XElement xmlB)
         {
