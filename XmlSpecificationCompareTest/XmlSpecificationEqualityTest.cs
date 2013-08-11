@@ -35,13 +35,11 @@ namespace XmlSpecificationCompareTest
               <root>
               </root>";
 
-
             var result = XmlSpecificationEquality.AreEqual(xmlA, xmlB);
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(((XElement)result.FailObject).Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(result.FailObject.Parent, Is.Null);
+            Assert.That(result.GetXPath(), Is.EqualTo("/a:root[1]"));
         }
 
         [Test]
@@ -123,8 +121,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(((XElement)result.FailObject).Name, Is.EqualTo(new XElement("{http://test.com/testingA}root").Name));
-            Assert.That(result.FailObject.Parent, Is.Null);
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]"));
         }
 
         [Test]
@@ -148,19 +145,8 @@ namespace XmlSpecificationCompareTest
             var result = XmlSpecificationEquality.AreEqual(xmlA, xmlB);
 
             Assert.That(result.Success, Is.False);
-            var attr = result.FailObject as XAttribute;
-            Assert.That(attr, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(attr.Name, Is.EqualTo(new XAttribute("attr", "attr").Name));
-            var elem = attr.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem2").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XAttribute>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
         }
 
         [Test]
@@ -185,19 +171,8 @@ namespace XmlSpecificationCompareTest
 
 
             Assert.That(result.Success, Is.False);
-            var attr = result.FailObject as XAttribute;
-            Assert.That(attr, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(attr.Name, Is.EqualTo(new XAttribute("attr", "attr").Name));
-            var elem = attr.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem2").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XAttribute>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
         }
 
         [Test]
@@ -221,15 +196,8 @@ namespace XmlSpecificationCompareTest
             var result = XmlSpecificationEquality.AreEqual(xmlA, xmlB);
 
             Assert.That(result.Success, Is.False);
-            var elem = result.FailObject as XElement;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem2").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XElement>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]"));
         }
 
 
@@ -254,15 +222,8 @@ namespace XmlSpecificationCompareTest
             var result = XmlSpecificationEquality.AreEqual(xmlA, xmlB);
 
             Assert.That(result.Success, Is.False);
-            var elem = result.FailObject as XElement;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem3").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XElement>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem3[1]"));
         }
 
         [Test]
@@ -287,18 +248,8 @@ namespace XmlSpecificationCompareTest
 
 
             Assert.That(result.Success, Is.False);
-            var text = result.FailObject as XText;
-            Assert.That(text, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            var elem = text.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem1").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XText>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem1[1]/text()"));
         }
 
         [Test]
@@ -334,22 +285,8 @@ namespace XmlSpecificationCompareTest
 
 
             Assert.That(result.Success, Is.False);
-            var text = result.FailObject as XCData;
-            Assert.That(text, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            var elem = text.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing1}elem2").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}elem1").Name));
-            elem = elem.Parent;
-            Assert.That(elem, Is.Not.Null);
-            // ReSharper disable once PossibleNullReferenceException
-            Assert.That(elem.Name, Is.EqualTo(new XElement("{http://test.com/testing}root").Name));
-            Assert.That(elem.Parent, Is.Null);
+            Assert.That(result.FailObject, Is.TypeOf<XCData>());
+            Assert.That(result.GetXPath(), Is.EqualTo("/a:root[1]/a:elem1[2]/d:elem2[2]/text()"));
         }
     }
 }

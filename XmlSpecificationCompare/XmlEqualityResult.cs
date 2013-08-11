@@ -19,7 +19,6 @@ namespace XmlSpecificationCompare
         /// <returns></returns>
         public string GetXPath()
         {
-
             return Success ? "" : FailObject.GetXPath();
         }
 
