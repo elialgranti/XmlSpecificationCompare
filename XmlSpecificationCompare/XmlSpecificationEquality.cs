@@ -6,6 +6,16 @@ using System.Xml.Linq;
 
 namespace XmlSpecificationCompare
 {
+    /// <summary>
+    /// Loosely compares XML documents for equality:
+    /// <list type="bullet">
+    /// <item>Order of siblings in an element is ignored.</item>
+    /// <item>Text nodes are the only node in at the bottom of the tree so sibling text nodes are merged for comparison.</item>
+    /// <item>The prefix used for a namespace is ignored.</item>
+    /// <item>Comments are ignored.</item>
+    /// </list>
+    /// This type of comparison is useful when comparing the XML documents used as messages, configuration, etc. in various specifications.
+    /// </summary>
     public class XmlSpecificationEquality
     {
         public static XmlEqualityResult AreEqual(string xmlA, string xmlB)
