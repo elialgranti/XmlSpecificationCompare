@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>XmlSpecificationCompare.Code</id>
+    <version>1.0.0.0</version>
+    <title></title>
+    <authors>Eli Algranti</authors>
+    <owners>Eli Algranti</owners>
     <licenseUrl>https://xmlspecificationcompare.codeplex.com/license</licenseUrl>
     <projectUrl>http://xmlspecificationcompare.codeplex.com/</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Utility for comparison of XML documents, see http://xmlspecificationcompare.codeplex.com/ for documentation.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
-    <tags>Xml XPath NUnit</tags>
+    <tags>Xml</tags>
   </metadata>
 </package>

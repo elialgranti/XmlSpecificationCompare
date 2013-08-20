@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="XPathDiscovery\AttributeXPathName.cs" />
+    <Compile Include="XPathDiscovery\CommentXPathName.cs" />
     <Compile Include="XPathDiscovery\ElementXPathName.cs" />
     <Compile Include="XPathDiscovery\IObjectXpathName.cs" />
+    <Compile Include="XPathDiscovery\TextXPathName.cs" />
     <Compile Include="XPathDiscovery\XpathExtension.cs" />
     <Compile Include="NUnit\NUnitExtension.cs" />
     <Compile Include="NUnit\XmlIs.cs" />
@@ -53,6 +56,9 @@
     <Compile Include="XmlSpecificationEquality.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="XmlSpecificationCompare.Code.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="XmlSpecificationCompare.nuspec">
       <SubType>Designer</SubType>
