@@ -6,7 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("XmlSpecificationCompare")]
-[assembly: AssemblyDescription("Utility for comparison of XML documents, see http://xmlspecificationcompare.codeplex.com/ for documentation.")]
+[assembly: AssemblyDescription("A library for loosely comparing XML documents, useful for comparing " + 
+                                "the XML documents used as messages in various specifications and for configuration files.\r\n" +
+                                "Order of siblings, Namespace prefixes, location of Namespace definition (xmlns attribute), etc. are ignored.\r\n" +
+                                "This package also contains utility classes for discovering the XPath of supported .Net XObjects and NUnit support.\r\n" + 
+                                "Standalone code nuget packages are also available, see http://xmlspecificationcompare.codeplex.com/ for documentation.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Eli Algranti")]
 [assembly: AssemblyProduct("XmlSpecificationCompare")]

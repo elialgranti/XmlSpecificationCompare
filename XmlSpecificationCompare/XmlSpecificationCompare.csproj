@@ -56,7 +56,10 @@
     <Compile Include="XmlSpecificationEquality.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="XmlSpecificationCompare.Code.nuspec">
+    <None Include="XPathDiscovery.Code.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XmlSpecificationEquality.Code.nuspec">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

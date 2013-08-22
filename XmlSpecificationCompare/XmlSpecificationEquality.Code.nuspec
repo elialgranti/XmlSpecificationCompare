@@ -10,7 +10,13 @@
     <projectUrl>http://xmlspecificationcompare.codeplex.com/</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Utility for comparison of XML documents, see http://xmlspecificationcompare.codeplex.com/ for documentation.</description>
+    <summary>Class for comparing the XML documents used as messages in various specifications and for configuration files.</summary>
+    <description>
+      "This is a code package with a utility class for loosely comparing XML documents, useful for comparing " +
+      "the XML documents used as messages in various specifications and for configuration files.\r\n" +
+      "Order of siblings, Namespace prefixes, location of Namespace definition (xmlns attribute), etc. are ignored.\r\n" +
+      "Binary nuget package with NUnit support is also available, see http://xmlspecificationcompare.codeplex.com/ for documentation.")
+    </description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
     <tags>Xml</tags>
