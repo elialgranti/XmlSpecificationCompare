@@ -1,6 +1,5 @@
 ﻿//Eli Algranti Copyright ©  2013
 using System.Xml.Linq;
-using XmlSpecificationCompare.XPathDiscovery;
 
 namespace XmlSpecificationCompare
 {
@@ -11,16 +10,6 @@ namespace XmlSpecificationCompare
     {
         private const string DefaultError = "Can'f find match for subtree.";
         private const string SuccessMessage = "Success";
-
-        /// <summary>
-        /// Returns the XPath of the object that failed the match or the empty string if
-        /// the match was successful.
-        /// </summary>
-        /// <returns></returns>
-        public string GetXPath()
-        {
-            return Success ? "" : FailObject.GetXPath();
-        }
 
         /// <summary>
         /// Gets whether the match was successful

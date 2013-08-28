@@ -2,6 +2,7 @@
 using System;
 using System.Xml.Linq;
 using NUnit.Framework.Constraints;
+using XmlSpecificationCompare.XPathDiscovery;
 
 namespace XmlSpecificationCompare.NUnit
 {
@@ -49,7 +50,7 @@ namespace XmlSpecificationCompare.NUnit
 
         public override void WriteMessageTo(MessageWriter writer)
         {
-            writer.WriteMessageLine(_result.ErrorMessage + "\r\n" + "Failed at: " + _result.GetXPath());
+            writer.WriteMessageLine(_result.ErrorMessage + "\r\n" + "Failed at: " + _result.FailObject.GetXPath());
         }
     }
 }

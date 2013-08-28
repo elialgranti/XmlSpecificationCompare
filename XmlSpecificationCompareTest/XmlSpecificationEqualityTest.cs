@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using NUnit.Framework;
 using XmlSpecificationCompare;
+using XmlSpecificationCompare.XPathDiscovery;
 
 namespace XmlSpecificationCompareTest
 {
@@ -39,7 +40,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/a:root[1]"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/a:root[1]"));
         }
 
         [Test]
@@ -121,7 +122,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]"));
         }
 
         [Test]
@@ -146,7 +147,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XAttribute>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
         }
 
         [Test]
@@ -172,7 +173,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XAttribute>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]/elem2[1]/@attr"));
         }
 
         [Test]
@@ -197,7 +198,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem2[1]"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]/elem2[1]"));
         }
 
 
@@ -223,7 +224,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XElement>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem3[1]"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]/elem3[1]"));
         }
 
         [Test]
@@ -249,7 +250,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XText>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/root[1]/elem1[1]/text()"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/root[1]/elem1[1]/text()"));
         }
 
         [Test]
@@ -286,7 +287,7 @@ namespace XmlSpecificationCompareTest
 
             Assert.That(result.Success, Is.False);
             Assert.That(result.FailObject, Is.TypeOf<XCData>());
-            Assert.That(result.GetXPath(), Is.EqualTo("/a:root[1]/a:elem1[2]/d:elem2[2]/text()"));
+            Assert.That(result.FailObject.GetXPath(), Is.EqualTo("/a:root[1]/a:elem1[2]/d:elem2[2]/text()"));
         }
     }
 }
