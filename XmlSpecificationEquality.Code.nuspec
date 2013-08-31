@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>XmlSpecificationCompare.Code</id>
-    <version>1.0.1.0</version>
+    <version>1.0.1.1</version>
     <title></title>
     <authors>Eli Algranti</authors>
     <owners>Eli Algranti</owners>
@@ -12,12 +12,12 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Class for comparing the XML documents used as messages in various specifications and for configuration files.</summary>
     <description>
-      "This is a code package with a utility class for loosely comparing XML documents, useful for comparing " +
-      "the XML documents used as messages in various specifications and for configuration files.\r\n" +
-      "Order of siblings, Namespace prefixes, location of Namespace definition (xmlns attribute), etc. are ignored.\r\n" +
-      "Binary nuget package with NUnit support is also available, see http://xmlspecificationcompare.codeplex.com/ for documentation.")
+      This is a code package with a utility class for loosely comparing XML documents, useful for comparing
+      the XML documents used as messages in various specifications and for configuration files.
+      Order of siblings, Namespace prefixes, location of Namespace definition (xmlns attribute), etc. are ignored.
+      Binary nuget package with NUnit support is also available, see http://xmlspecificationcompare.codeplex.com/ for documentation.
     </description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Fixed description of nuget package. Code is the same as 1.0.1.0</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
     <tags>Xml</tags>
   </metadata>
