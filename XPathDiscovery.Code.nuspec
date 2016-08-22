@@ -11,7 +11,7 @@
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a code package containing utility classes for discovering the XPath of supported .Net XObjects, see http://xmlspecificationcompare.codeplex.com/ for documentation.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Updated version to match binary package. Code is the same as 1.0.1.0</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
     <tags>Xml XPath</tags>
   </metadata>

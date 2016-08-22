@@ -17,7 +17,7 @@
       Order of siblings, Namespace prefixes, location of Namespace definition (xmlns attribute), etc. are ignored.
       Binary nuget package with NUnit support is also available, see http://xmlspecificationcompare.codeplex.com/ for documentation.
     </description>
-    <releaseNotes>Fixed description of nuget package. Code is the same as 1.0.1.0</releaseNotes>
+    <releaseNotes>Updated version to match binary package. Code is the same as 1.0.1.1</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
     <tags>Xml</tags>
   </metadata>

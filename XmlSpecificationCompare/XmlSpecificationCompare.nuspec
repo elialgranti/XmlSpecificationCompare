@@ -12,7 +12,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>A library for comparing the XML documents used as messages in various specifications and for configuration files.</summary>
     <description>$description$</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>
+      Updated NUnit support to use version 3.4
+      Functionality remains the same. 
+      If you use NUnit 2.6 choose version 1.0.1 of this package.</releaseNotes>
     <copyright>Copyright Eli Algranti (c) 2013</copyright>
     <tags>Xml XPath NUnit</tags>
   </metadata>
