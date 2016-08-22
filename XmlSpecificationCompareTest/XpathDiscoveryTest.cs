@@ -29,7 +29,7 @@ namespace XmlSpecificationCompareTest
         private XmlNamespaceManager _namespaceManager;
 
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             _document = XDocument.Parse(XPathSource);

@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSpecificationCompare", "XmlSpecificationCompare\XmlSpecificationCompare.csproj", "{C527B8F1-61A1-43A2-ABCD-4C46BFAE6463}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSpecificationCompareTest", "XmlSpecificationCompareTest\XmlSpecificationCompareTest.csproj", "{018E9713-9F84-438E-B94E-024854A17632}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D2892E9-DA50-4990-8FF0-5415BB229056}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		CreateNugetPackages.ps1 = CreateNugetPackages.ps1
 		XmlSpecificationEquality.Code.nuspec = XmlSpecificationEquality.Code.nuspec
 		XPathDiscovery.Code.nuspec = XPathDiscovery.Code.nuspec
