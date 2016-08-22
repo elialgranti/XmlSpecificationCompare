@@ -1,4 +1,4 @@
-$NUGET = 'nuget'
+$NUGET = (Get-ChildItem packages\NuGet.CommandLine*\tools\nuget.exe | Select-Object -First 1).ToString()
 if (-Not (Get-Command $NUGET))
 {
     Write-Output "Cannot find nuget.exe. Make sure nuget.exe is in a directory in the PATH"
